@@ -30,7 +30,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    ComposeArtileCard(
+                    ComposeArticleCard(
                         imageRes = R.drawable.bg_compose_background,
                         title = stringResource(id = R.string.title),
                         shortDescription = stringResource(id = R.string.short_description),
@@ -44,7 +44,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun ComposeArtileCard(
+fun ComposeArticleCard(
     imageRes: Int,
     title: String,
     shortDescription: String,
@@ -52,7 +52,11 @@ fun ComposeArtileCard(
     modifier: Modifier,
 ) {
     Column(modifier) {
-        Image(painter = painterResource(imageRes), contentDescription = null, modifier = modifier)
+        Image(
+            painter = painterResource(imageRes),
+            contentDescription = null,
+            modifier = modifier
+        )
         Text(
             text = title,
             fontSize = 24.sp,
@@ -82,7 +86,7 @@ fun ComposeArtileCard(
 @Composable
 fun ComposeArticleCardPreview() {
     ComposeArticleTheme {
-        ComposeArtileCard(
+        ComposeArticleCard(
             imageRes = R.drawable.bg_compose_background,
             title = stringResource(R.string.title),
             shortDescription = stringResource(R.string.short_description),
