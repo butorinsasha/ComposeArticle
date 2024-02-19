@@ -80,7 +80,7 @@ fun ComposeArtileCard(
     showSystemUi = true
 )
 @Composable
-fun ComposeArtileCardPreview() {
+fun ComposeArticleCardPreview() {
     ComposeArticleTheme {
         ComposeArtileCard(
             imageRes = R.drawable.bg_compose_background,
